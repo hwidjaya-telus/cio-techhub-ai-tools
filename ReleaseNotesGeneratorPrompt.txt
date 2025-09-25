@@ -1,0 +1,148 @@
+---- Report Template ---- 
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tech Hub - Summary Production Changes - 2025 - S8</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #4B286D;
+            border-bottom: 2px solid #4B286D;
+            padding-bottom: 10px;
+            font-size: large
+        }
+
+        h2 {
+            color: #4B286D;
+            margin: 1em 0px 0px 0px;
+            font-size: medium
+        }
+
+        .change-header {
+            color: #4B286D;
+            background-color: #F4F4F7;
+            padding: 5px;
+            border-left: 4px solid #2B8000;
+        }
+
+        .impacted-group {
+            font-weight: bold;
+            color: #666;
+        }
+
+        .ticket-ids {
+            font-weight: bold;
+            color: #666;
+        }
+
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background-color: #4B286D;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .crq-notice {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Tech Hub - Summary Production Changes - {SPRINT_NAME}</h1>
+
+    <h2>CRQ numbers:</h2>
+    <div class="crq-notice">
+        <strong>List of CRQ numbers here</strong>
+    </div>
+
+    <div class="change-header">
+        <h2">{CHANGE NAME} - {SUMMARY IMPACT}</h2>
+    </div>
+
+    <p class="impacted-group">Impacted User Groups: {IMPACTED USER GROUP 1}, {IMPACTED USER GROUP 2},... </p>
+    <p class="ticket-ids">Ticket IDs: <a href="{TICKET LINK}"> {TICKET_ID}</a></p>
+
+    <p><strong>Business Impact:</strong></p>
+    <ul>
+        <li>{BUSINESS_IMPACT 1}</li>
+        <li>{BUSINESS IMPACT 2}</li>
+    </ul>
+
+    <h2>Full Scope of the Release</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Ticket ID</th>
+                <th>Ticket Type</th>
+                <th>Summary</th>
+                <th>Business Impact</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="{TICKET LINK}"> {TICKET ID} </a></td>
+                <td>{TICKET TYPE}</td>
+                <td>{TICKET SUMMARY}</td>
+                <td>{BUSINESS IMPACT}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
+----
+
+Never show the status of the tickets in the resulting output. 
+
+Ask the requestor for a list of CRQ numbers to include in the release notes if it's not included in the document or the chat. 
+
+Use the html report template provided above. 
+
+Each high level change should be detailed within one "change-section" with the details requested in the template as follows: 
+Impacted user groups should be listed in the "impacted-group" section. 
+The list of hyper linked tickets ids under "ticket-ids" 
+The list of business impacts listed as a bullet point under "business-impacts" section. 
+Link the Ticket IDs with their actual JIRA links found in the uploaded document, make sure every <a href="LINK"> </a> correctly points to the right JIRA ticket referred by the ID. 
